@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SustainSavers</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        body {
+    font-family:  'Montserrat' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 5%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-right: 800px;
+
+}
+
+ .navbar a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .2);
+
+
+ }
+#content-container{
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll; 
+    scroll-snap-type: y mandatory;
+}
+ section {
+   
+    
+    height: 100vh; 
+   
+    scroll-snap-align: none;
+}
+
+.page-section {
+   
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+#scrollBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 99;
+  justify-content: center;
+    align-items: center;
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border: 2px solid white;
+  
+
+  
+}
+
+#scrollBtn span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon-container {
+  
+  color:black;
+  font-size: 24px;
+
+  
+}
+#scrollBtn:hover {
+    background-color: white;
+    color: black;
+
+}
+
+
+    </style>
+    
+    
+</head>
+<body>
+   
+
+    
+    <header class="header">
+        <a href="#" class="logo">SS</a>
+        
+        
+           
+           
+        
+        <nav class="navbar">
+            <a href="#section1">Home</a>
+            <a href="#section2">Statistics</a>
+            <a href="#section3">Awareness</a>
+            <a href="#section4">Contact</a>
+        </nav>
+    </header>
+
+    
+    <button onclick="scrollToTop()" id="scrollBtn" title="Go to top"><span class="icon-container"><ion-icon name="arrow-round-up"></ion-icon></span></button>
+    
+
+        <!-- Section 1 -->
+        <section id="section1">
+            <!-- Load content from external HTML file -->
+            <iframe src="landing.html" frameborder="0" width="100%" height="100%" id="landing"></iframe>
+        </section>
+        <section id="section5">
+          <!-- Load content from external HTML file -->
+          <iframe src="vm.html" frameborder="0" width="100%" height="100%" id="landing"></iframe>
+      </section>
+
+        
+
+        <!-- Section 2 -->
+        <section id="section2">
+            <!-- Load content from external HTML file -->
+            <iframe src="statistics.html" frameborder="0" width="100%" height="100%" id="statistics"></iframe>
+        <section>
+
+        <!-- Section 3 -->
+        <section id="section3">
+            <!-- Load content from external HTML file -->
+            <iframe src="awareness.html" frameborder="0" width="100%" height="100%" id="awareness"></iframe>
+        </section>
+
+        <!-- Add more sections as needed -->
+        <section id="section4">
+            <!-- Load content from external HTML file -->
+            <iframe src="contact.html" frameborder="0" width="100%" height="100%" id="awareness"></iframe>
+        </section>
+        
+    </div>
+    
+  <script>
+    document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Get the button
+var scrollToTopBtn = document.getElementById("scrollBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document smoothly
+function scrollToTop() {
+  // Scroll to the top smoothly
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+
+
+  </script>
+    
+
+    
+
+</body>
+</html>
