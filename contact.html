@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>SustainSavers</title>
+        <link rel="stylesheet" href="contact.css">
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        
+    </head>
+    <body>
+     
+      
+      <div class="background"></div>
+      <div class="container">
+        <div class="content">
+          <div class="timeline">
+            <div class="box left-box">
+             <img src="circle.png">
+              <div class="text-box">
+                <h2>Sustain Savers</h2>
+                <p></p>
+                <span class="left-box-arrow"></span>
+              </div>
+            </div>
+            <div class="box right-box">
+              <img src="circle.png">
+              <div class="text-box">
+                <h2>Sign up as a volunteer</h2>
+                <p>Fill up the form and join us</p>
+                <span class="right-box-arrow"></span>
+              </div>
+            </div>
+            <div class="box left-box">
+              <img src="circle.png">
+              <div class="text-box">
+                <h2>Connect</h2>
+                <p>We'll reach out to you during food distributions</p>
+                <span class="left-box-arrow"></span>
+              </div>
+            </div>
+            <div class="box right-box">
+              <img src="circle.png"> 
+              <div class="text-box">
+                <h2>Help</h2>
+                <p>We will assist you in helping people directly</p>
+                <span class="right-box-arrow"></span>
+              </div>
+            </div>
+          
+            
+
+
+          </div>
+         
+        </div>
+        <div class="signupform">
+          <div class="loginform">
+            <form action="#">
+              <h2>JOIN US</h2>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Name:</label>
+
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="mail-open"></ion-icon></span>
+                <input type="email" required>
+                <label>Email:</label>
+
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="call"></ion-icon></span>
+                <input type="text" required>
+                <label>Mobile Number:</label>
+
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="briefcase"></ion-icon></span>
+                <input type="text" required>
+                <label>Organisation:</label>
+
+              </div>
+              <div class="input-box">
+                <span class="icon"><ion-icon name="home"></ion-icon></span>
+                <input type="text" required>
+                <label>Address:</label>
+
+              </div>
+              <button type="submit" class="btn">Join!!</button>
+              
+
+
+      
+              
+            </form>
+            <br><br>
+            <div class="social-media">
+              <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+          </div>
+
+          </div>
+          
+        </div>
+        
+      </div>
+
+    <script src="contact.js"></script>
+    <script>
+      // Intersection Observer to trigger animation when section is in view
+      const timeline = document.querySelector('.timeline');
+  
+      const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  // Add class to trigger animation when section is in view
+                  timeline.classList.add('animate');
+              } else {
+                  // Remove class if not in view
+                  timeline.classList.remove('animate');
+              }
+          });
+      });
+  
+      // Observe the timeline section
+      observer.observe(timeline);
+  </script>
+  </body>
+</html>
+   
